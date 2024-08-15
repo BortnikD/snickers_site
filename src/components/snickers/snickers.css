@@ -1,0 +1,118 @@
+.snickers-main {
+    margin-left: 15%;
+    color: white;
+    margin-top: 100px;
+    width: 70%;
+    height: auto; /* Устанавливаем height на auto, чтобы блок адаптировался по высоте к содержимому */
+    min-height: 700px; 
+    background-color: #353232;
+    border-radius: 15px;
+    position: relative; /* Обязательное свойство для использования absolute в дочерних элементах */
+}
+
+.snickers-actions{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+}
+
+.snickers-title-actions {
+    margin-left: 50px;
+    margin-right: 30%; 
+    transition: color 0.7s ease;
+}
+
+.snickers-title-actions:hover {
+    color: yellow;
+}
+
+.snickers-title {
+    white-space: normal; /* Позволяет тексту переноситься на несколько строк */
+    height: 60px; /* Фиксированная высота для выравнивания */
+    overflow: hidden; /* Если текст выходит за границы, он будет обрезан */
+    text-align: center; /* Центрирует текст */
+}
+
+
+.search {
+    margin-right: 30%;
+}
+
+.search input{
+    display: block;
+}
+
+.sort {
+    margin-right: 30px;
+}
+.sort label{
+    display: block;
+}
+
+.snickers-cards {
+    display: flex;
+    justify-content: center; /* Центрируем карточки по горизонтали */
+    align-items: center; /* Центрируем карточки по вертикали, если они разных размеров */
+    flex-wrap: wrap; 
+    padding-bottom: 80px;
+    margin: 0 auto; /* Убираем смещение и выравниваем по центру */
+}
+
+.snickers-card {
+    border-radius: 30px;
+    background-color: #5353536e;    
+    justify-content: center; /* Центрируем карточки по горизонтали */
+    align-items: center; /* Центрируем карточки по вертикали, если они разных размеров */
+    width: 25%;
+    margin: 10px;
+    text-align: center; /* Центрирует текст внутри карточки */
+    transition: background-color 0.5s ease;
+}
+
+.snickers-card:hover {
+    background-color: #91909079;
+}
+
+.snickers-card img {
+    display: block;
+    margin: 0 auto; /* Центрирует изображение внутри блока */
+}
+
+.snickers-title {
+    white-space: nowrap;
+}
+
+.controlers {
+    position: absolute; /* Позволяет разместить элемент относительно родителя */
+    bottom: 0; /* Привязывает элемент к нижней части родителя */
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали */
+    border-radius: 15px;
+    width: 100%;
+    height: 60px;
+}
+
+.prew-page-btn {
+    color: rgb(0, 0, 0);
+    background-color: yellow;
+    width: 75px;
+    border-radius: 30px;
+    height: 30px;
+}
+
+.next-page-btn {
+    color: rgb(0, 0, 0);
+    background-color: yellow;
+    border-radius: 30px;
+    width: 75px;
+    height: 30px;
+}
+
+.price {
+    color: orange;
+}

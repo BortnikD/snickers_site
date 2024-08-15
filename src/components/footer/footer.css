@@ -1,0 +1,17 @@
+footer{
+    display: flex;
+    background-color: #222;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center;  /* Центрирование по вертикали */
+    height: 75px;
+    width: 100%;
+    margin-top: 100px;
+    position: fixed; /* Фиксированное позиционирование */
+    bottom: 0; /* Располагаем футер внизу экрана */
+    left: 0; /* По умолчанию, футер также будет растягиваться на всю ширину экрана */
+}
+
+.footer-title{
+    color: rgb(208, 255, 40);
+}
+

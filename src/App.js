@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import Header from "./components/header/Header"
+import Snickers from "./components/snickers/Snickers"
+import Footer from "./components/footer/Footer"
+import About from "./components/about/About"
+import Contacts from "./components/contacts/Contacts"
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const items = require('./snickers.json')
+
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: items
+        };
+    }
+
+    render() {
+        return (
+            <div className="wrapper">
+                <BrowserRouter>  
+                    <Header />     
+
+                    <Routes>
+                        <Route path='/' element={
+                            <>
+                                <Snickers snickersList={this.state.items}/>
+                            </>
+                        }/>
+                        <Route path='/about' element={ <About /> } />
+                        <Route path='/contacts' element={ <Contacts /> } />
+                    </Routes>
+
+                    <Footer />
+                </BrowserRouter>
+            </div>
+        )
+    }
 }
 
 export default App;
